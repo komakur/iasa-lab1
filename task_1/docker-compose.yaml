@@ -1,0 +1,4 @@
+services: 
+    task_1:
+        image: hello-world:latest
+        

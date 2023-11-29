@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    task_2:
+        image: node:latest
+        working_dir: /lite_serv
+        volumes:
+        - ./:/lite_serv
+        ports: 
+        - 7000:3000
+        command: bash script_pipe.sh
+    
