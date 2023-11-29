@@ -3,17 +3,17 @@
         {
             "id": 1,
             "title": "json-server",
-            "author": "typicode"
+            "author": "me"
         }
     ],
     "comments": [
         {
             "id": 1,
-            "body": "some comment",
+            "body": "comment",
             "postId": 1
         }
     ],
     "profile": {
-        "name": "typicode"
+        "name": "code"
     }
 }
