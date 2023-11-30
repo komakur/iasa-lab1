@@ -7,8 +7,10 @@ services:
         volumes:
         - ./json_server:/json_serv
         command: bash script_pipe.sh
-        expose: 
-        - 8000
+        # expose: 
+        # - 8000
+        ports:
+            -   "8000:8000"
 
     lite_server:
         image: node:latest
@@ -16,15 +18,17 @@ services:
         volumes:
         - ./lite_server:/lite_serv
         command: bash script_pipe.sh
-        expose:
-        - 3000
+        # expose:
+        # - 3000
+        ports:
+            -   "3000:3000"
         
     nginx:
         image: nginx
         volumes:
-        - ./templates:/etc/nginx/templates
+        - ./templates:/etc/nginx/templates/nginx.conf
         ports:
-        - "8080:80"
+        - "80:80"
         environment:
         - NGINX_HOST=0.0.0.0
         - NGINX_PORT=80
